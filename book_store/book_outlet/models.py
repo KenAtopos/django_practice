@@ -3,4 +3,5 @@ from django.db import models
 # Create your models here.
 
 
-class Book
+class Book(models.Model):
+    title =
