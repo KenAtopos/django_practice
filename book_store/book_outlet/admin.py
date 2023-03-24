@@ -1,7 +1,11 @@
 from django.contrib import admin
-from .models import Book, Author
+from .models import Book, Author, Address
 
 # Register your models here.
+
+
+class AddressAdmin(admin.ModelAdmin):
+    list_filter = ("city",)
 
 
 class AuthorAdmin(admin.ModelAdmin):
@@ -18,3 +22,4 @@ class BookAdmin(admin.ModelAdmin):
 
 admin.site.register(Book, BookAdmin)
 admin.site.register(Author, AuthorAdmin)
+admin.site.register(Address, AddressAdmin)
